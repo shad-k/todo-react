@@ -4,6 +4,7 @@ import * as actionCreators from '../Actions/actionCreators';
 import { bindActionCreators } from 'redux';
 
 import TodoForm from './TodoForm';
+import TodoList from './TodoList';
 
 import '../Styles/App.css';
 
@@ -12,6 +13,9 @@ class App extends Component {
     return (
       <div className="container">
       	<TodoForm addTodo={this.props.addTodo} />
+      	{this.props.todos.length !== 0 &&
+      		<TodoList todoList={this.props.todos} />
+      	}
       </div>
     );
   }
@@ -19,7 +23,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		todo: state.todo
+		todos: state.todos
 	};
 }
 

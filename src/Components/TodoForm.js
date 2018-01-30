@@ -4,10 +4,10 @@ class TodoForm extends Component {
     constructor(props) {
         super(props);
 
-        this.clickHandler = this.clickHandler.bind(this);
+        this.submitHandler = this.submitHandler.bind(this);
     }
 
-    clickHandler(e) {
+    submitHandler(e) {
     	e.preventDefault();
     	const todo = this.todo.value;
     	this.props.addTodo(todo);
@@ -16,9 +16,9 @@ class TodoForm extends Component {
 
     render() {
         return (
-        	<form ref={(input) => this.addForm = input} className="add-todo-form">
+        	<form ref={(input) => this.addForm = input} onSubmit={this.submitHandler} className="add-todo-form">
 	        	<input ref={(input) => this.todo = input} type="text" className="add-todo-input" />
-	        	<button className="add-todo-button" onClick={this.clickHandler}>Add Todo</button>
+	        	<button className="add-todo-button">Add Todo</button>
         	</form>
         );
     }
