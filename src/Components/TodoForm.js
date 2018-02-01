@@ -10,8 +10,10 @@ class TodoForm extends Component {
     submitHandler(e) {
     	e.preventDefault();
     	const todo = this.todo.value;
-    	this.props.addTodo(todo);
-    	this.addForm.reset(0);
+        if(todo !== '') {
+            this.props.addTodo(todo);
+            this.addForm.reset(0);
+        }
     }
 
     render() {

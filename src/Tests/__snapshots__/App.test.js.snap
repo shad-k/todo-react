@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components <App /> renders without crashing 1`] = `
+<div
+  className="container"
+>
+  <form
+    className="add-todo-form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="add-todo-input"
+      type="text"
+    />
+    <button
+      className="add-todo-button"
+    >
+      Add Todo
+    </button>
+  </form>
+</div>
+`;
+
+exports[`components <TodoForm /> renders without crashing 1`] = `
+<form
+  className="add-todo-form"
+  onSubmit={[Function]}
+>
+  <input
+    className="add-todo-input"
+    type="text"
+  />
+  <button
+    className="add-todo-button"
+  >
+    Add Todo
+  </button>
+</form>
+`;
+
+exports[`components <TodoList /> renders without crashing 1`] = `
+<ul
+  className="todo-list"
+/>
+`;

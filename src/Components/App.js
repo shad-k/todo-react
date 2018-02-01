@@ -8,12 +8,12 @@ import TodoList from './TodoList';
 
 import '../Styles/App.css';
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <div className="container">
       	<TodoForm addTodo={this.props.addTodo} />
-      	{this.props.todos.length !== 0 &&
+      	{this.props.todos &&
       		<TodoList todoList={this.props.todos} />
       	}
       </div>
